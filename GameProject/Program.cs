@@ -33,8 +33,8 @@ namespace GameProject
                 GameName = "Oyun 1"
             };
 
-            List<IEntity> salesList = new List<IEntity> { member, game, campaign };
-            List<IEntity> salesList2 = new List<IEntity> { member, game };
+            //List<IEntity> salesList = new List<IEntity> { member, game }; // Non-Campaign
+            List<IEntity> salesList = new List<IEntity> { member, game, campaign }; // Campaign
 
             //MemberManager memberManager = new MemberManager(new MemberCheckManager()); // Testing
             MemberManager memberManager = new MemberManager(new MernisServiceAdapter()); // Real Checking
@@ -46,8 +46,8 @@ namespace GameProject
                 DateOfBirth = new DateTime(1900, 1, 1),
                 NationalityId = "11111111111"
             });
-            memberManager.Delete(member);
             memberManager.Update(member);
+            memberManager.Delete(member);
 
             CampaignManager campaignManager = new CampaignManager();
             campaignManager.Add(new Campaign
@@ -56,11 +56,20 @@ namespace GameProject
                 CampaignName = "Kampanya 2",
                 CampaignType = "Yaz"
             });
-            campaignManager.Delete(campaign);
             campaignManager.Update(campaign);
+            campaignManager.Delete(campaign);
 
             GameManager gameManager = new GameManager();
-            gameManager.Sale(salesList);
+            gameManager.Add(new Game
+            {
+                GameId = 2,
+                GameName = "Oyun 2"
+            });
+            gameManager.Update(game);
+            gameManager.Delete(game);
+
+            OrderManager orderManager = new OrderManager();
+            orderManager.Sale(salesList);
         }
     }
 }
