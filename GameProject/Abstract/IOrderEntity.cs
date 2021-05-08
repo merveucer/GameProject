@@ -4,8 +4,7 @@ using System.Text;
 
 namespace GameProject.Abstract
 {
-    public interface IOrderService
+    public interface IOrderEntity
     {
-        void Sale(List<IOrderEntity> orderEntities);
     }
 }

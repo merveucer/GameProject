@@ -7,7 +7,7 @@ namespace GameProject.Concrete
 {
     public class OrderManager : IOrderService
     {
-        public void Sale(List<IEntity> entities)
+        public void Sale(List<IOrderEntity> orderEntities)
         {
             Console.WriteLine("Satış başarıyla gerçekleştirildi.");
         }

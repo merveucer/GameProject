@@ -11,13 +11,11 @@ namespace GameProject.Concrete
         public void Add(Campaign campaign)
         {
             Console.WriteLine(campaign.CampaignName + " isimli yeni kampanya eklendi.");
-
         }
 
         public void Delete(Campaign campaign)
         {
             Console.WriteLine(campaign.CampaignName + " isimli kampanya silindi.");
-
         }
 
         public void Update(Campaign campaign)

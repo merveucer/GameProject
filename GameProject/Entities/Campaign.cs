@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameProject.Entities
 {
-    public class Campaign : IEntity
+    public class Campaign : IEntity, IOrderEntity
     {
         public int CampaignId { get; set; }
         public string CampaignName { get; set; }

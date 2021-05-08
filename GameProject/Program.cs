@@ -34,7 +34,7 @@ namespace GameProject
             };
 
             //List<IEntity> salesList = new List<IEntity> { member, game }; // Non-Campaign
-            List<IEntity> salesList = new List<IEntity> { member, game, campaign }; // Campaign
+            List<IOrderEntity> salesList = new List<IOrderEntity> { member, game, campaign }; // Campaign
 
             //MemberManager memberManager = new MemberManager(new MemberCheckManager()); // Testing
             MemberManager memberManager = new MemberManager(new MernisServiceAdapter()); // Real Checking

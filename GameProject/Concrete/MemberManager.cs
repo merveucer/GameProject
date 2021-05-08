@@ -30,13 +30,11 @@ namespace GameProject.Concrete
         public void Delete(Member member)
         {
             Console.WriteLine(member.FirstName + " isimli üye silindi.");
-
         }
 
         public void Update(Member member)
         {
             Console.WriteLine(member.FirstName + " isimli üye güncellendi.");
-
         }
     }
 }

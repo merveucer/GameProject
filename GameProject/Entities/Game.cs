@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameProject.Entities
 {
-    public class Game : IEntity
+    public class Game : IEntity, IOrderEntity
     {
         public int GameId { get; set; }
         public string GameName { get; set; }
